@@ -1,0 +1,117 @@
+@font-face {
+    font-family: Norse;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-color: #fcc99e; /* Image's sky color if something goes wrong*/
+
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding: 0;
+}
+
+.left-part {
+    flex: 1;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.left-top {
+    flex: 2;
+}
+
+.left-middle {
+    flex: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 8px;
+
+    max-height: 20vh;
+    max-width: 35vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: Norse;
+    font-size: min(15vh, 10vw);
+}
+
+.left-middle img {
+    height: 80%;
+    width: auto;
+}
+
+.left-bottom {
+    padding: 8px;
+
+    flex: 6;
+
+    color: white;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+}
+
+.left-bottom a {
+    color: white;
+}
+
+.right-part {
+    background-color: #eeeeee;
+
+    flex: 2;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.top-container {
+    flex: 3;
+
+    background-color: transparent;
+
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+
+    padding: 48px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 12px;
+}
+
+.form-container {
+    flex: 4;
+
+    padding: 48px;
+
+    background-color: #cccccc;
+}
+
+.bottom-container {
+    flex: 3;
+
+    padding: 48px;
+
+    background-color: transparent;
+}
