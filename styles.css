@@ -21,10 +21,12 @@ body {
 
     margin: 0;
     padding: 0;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .left-part {
-    flex: 1;
+    flex: 1 0 0;
     height: 100vh;
 
     display: flex;
@@ -32,16 +34,13 @@ body {
 }
 
 .left-top {
-    flex: 2;
+    flex: 2 0 0;
 }
 
 .left-middle {
-    flex: 2;
+    flex: 2 0 0;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 8px;
-
-    max-height: 20vh;
-    max-width: 35vw;
 
     display: flex;
     align-items: center;
@@ -53,14 +52,14 @@ body {
 }
 
 .left-middle img {
-    height: 80%;
-    width: auto;
+    width: 10vw;
+    height: auto;
 }
 
 .left-bottom {
     padding: 8px;
 
-    flex: 6;
+    flex: 6 0 0;
 
     color: white;
 
@@ -75,20 +74,20 @@ body {
 }
 
 .right-part {
-    background-color: #eeeeee;
+    background-color: #754f44;
 
-    flex: 2;
+    flex: 2 0 0;
 
     display: flex;
     flex-direction: column;
 }
 
 .top-container {
-    flex: 3;
+    flex: 3 0 0;
 
     background-color: transparent;
 
-    color: black;
+    color: white;
     font-size: 24px;
     font-weight: bold;
 
@@ -101,17 +100,124 @@ body {
 }
 
 .form-container {
-    flex: 4;
+    flex: 4 0 0;
 
     padding: 48px;
 
-    background-color: #cccccc;
+    background-color: #faa661;
+
+    color: white;
+}
+
+.form-container p {
+    font-size: 24px;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.form-container form {
+    display: flex;
+    gap: 64px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-element input {
+    height: 4vh;
+    width: 15vw;
+
+    background-color: transparent;
+    border: 2px solid #dddddd;
+    border-radius: 12px;
+
+    color: white;
+    font-size: 24px;
+
+    padding: 4px;
+}
+
+.form-element input:focus {
+    border: 2px solid white;
+    outline: none;
+    box-shadow: 1px 2px 3px black;
+}
+
+.form-element input:invalid, .form-element .error {
+    border-color: red;
+}
+
+.form-element label:has(+ input:invalid) {
+    color: red;
+}
+
+.label-error {
+    font-size: 12px;
+    color: red;
 }
 
 .bottom-container {
-    flex: 3;
+    flex: 3 0 0;
 
     padding: 48px;
 
     background-color: transparent;
+
+    font-size: 24px;
+    color: white;
+}
+
+.bottom-container a {
+    color: #fcc99e;
+    text-decoration: none;
+}
+
+.bottom-container a:hover {
+    text-decoration: underline;
+}
+
+.bottom-container a:active {
+    text-decoration: none;
+}
+
+.bottom-container input[type="submit"] {
+    background-color: #fcc99e;
+    border: 4px solid transparent;
+    padding: 12px 36px;
+
+    border-radius: 8px;
+    
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+
+    margin-bottom: 24px;
+}
+
+.bottom-container input[type="submit"]:hover {
+    border: 4px solid white;
+}
+
+.bottom-container input[type="submit"]:active {
+    background-color: #faa661;
+}
+
+
+.hidden {
+    visibility: hidden;
 }

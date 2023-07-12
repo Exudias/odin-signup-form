@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts/index.js"></script>
 </head>
 <body>
     <div class="left-part">
@@ -16,7 +17,7 @@
             ODIN
         </div>
         <div class="left-bottom">
-            <span>Photo by <a href="https://unsplash.com/@marekpiwnicki?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marek Piwnicki</a> on <a href="https://unsplash.com/photos/a-view-of-a-mountain-range-at-sunset-kMdf282tpX4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
+            <span>Photo by <a href="https://unsplash.com/@marekpiwnicki?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" tabindex="-1">Marek Piwnicki</a> on <a href="https://unsplash.com/photos/a-view-of-a-mountain-range-at-sunset-kMdf282tpX4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" tabindex="-1">Unsplash</a></span>
         </div>
     </div>
     <div class="right-part">
@@ -28,40 +29,41 @@
         </div>
         <div class="form-container">
             <p>Let's do this!</p>
-            <form>
+            <form id="signup-form">
                 <div class="form-column">
                     <div class="form-element">
-                        <label for="first-name">First name</label>
-                        <input type="text" id="first-name" name="first-name">
+                        <label for="first-name">First name *</label>
+                        <input type="text" id="first-name" name="first-name" required tabindex="1">
                     </div>
                     <div class="form-element">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" tabindex="3">
                     </div>
                     <div class="form-element">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password">
+                        <label for="password">Password *</label>
+                        <input class="error" type="password" id="password" name="password" required tabindex="5">
+                        <label class="label-error hidden">* Passwords do not match</label>
                     </div>
                 </div>
                 <div class="form-column">
                     <div class="form-element">
-                        <label for="last-name">Last name</label>
-                        <input type="text" id="last-name" name="last-name">
+                        <label for="last-name">Last name *</label>
+                        <input type="text" id="last-name" name="last-name" required tabindex="2">
                     </div>
                     <div class="form-element">
                         <label for="phone">Phone number</label>
-                        <input type="tel" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" tabindex="4">
                     </div>
                     <div class="form-element">
-                        <label for="confirm-password">Confirm password</label>
-                        <input type="password" id="confirm-password" name="confirm-password">
+                        <label for="confirm-password">Confirm password *</label>
+                        <input class="error" type="password" id="confirm-password" name="confirm-password" required tabindex="6">
                     </div>
                 </div>
             </form>
         </div>
         <div class="bottom-container">
-            <button>Create Account</button>
-            <p>Already have an account? <a href="">Log in</a></p>
+            <input type="submit" form="signup-form" value="Create Account" tabindex="7">
+            <p>Already have an account? <a href="" tabindex="8">Log in</a></p>
         </div>
     </div>
 </body>
